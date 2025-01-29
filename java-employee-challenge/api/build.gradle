@@ -1,0 +1,21 @@
+plugins {
+    id 'project-conventions'
+}
+
+ext {
+	set('resilience4jVersion', "2.2.0")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+	implementation "io.github.resilience4j:resilience4j-spring-boot3:${resilience4jVersion}"
+	implementation "org.springframework.boot:spring-boot-starter-actuator"
+	implementation "org.springframework.boot:spring-boot-starter-aop"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    
+}
+
+springBoot {
+    mainClass = 'com.reliaquest.api.ApiApplication'
+}

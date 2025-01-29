@@ -1,0 +1,31 @@
+server:
+  port: '8111'
+spring:
+  application:
+    name: employee-api
+  cloud:
+    openfeign:
+      client:
+        config:
+          employeeDataServiceClient:
+            loggerLevel: FULL
+            url: http://localhost:8112/
+
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+    web: TRACE
+    com:
+      reliaquest:
+        api:
+          data:
+            EmployeeDataServiceClient: DEBUG
+resilience4j.retry:
+  instances:
+    simpleRetry:
+      maxAttempts: 2
+      waitDuration: 2s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
