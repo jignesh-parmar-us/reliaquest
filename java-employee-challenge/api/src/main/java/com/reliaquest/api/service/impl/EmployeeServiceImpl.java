@@ -105,7 +105,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public String deleteEmployeeById(String id) {
         EmployeeView employee = findById(id);
         log.debug("Employee Found: {}", employee);
-        List<EmployeeView> employeesByName = findByName(employee.name());
+        List<EmployeeView> employeesByName = getAllEmployees().stream()
+                .filter(e -> e.name().toLowerCase().equals(employee.name().toLowerCase()))
+                .collect(Collectors.toList());
         log.debug("Employee List By Name : {}", employeesByName);
         if (1 == employeesByName.size()
                 && employee.id().equals(employeesByName.get(0).id())) {
