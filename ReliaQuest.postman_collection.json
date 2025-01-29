@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "4b255430-2f72-42d8-b9d2-649614580ad3",
+		"name": "ReliaQuest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MockEmployee",
+			"item": [
+				{
+					"name": "GetEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8112/api/v1/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8112",
+							"path": [
+								"api",
+								"v1",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmployeeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8112/api/v1/employee/da0a7bd1-0780-4f07-8999-f5395525700a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8112",
+							"path": [
+								"api",
+								"v1",
+								"employee",
+								"da0a7bd1-0780-4f07-8999-f5395525700a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jill Jenkins\",\n    \"salary\": 139082,\n    \"age\": 48,\n    \"title\": \"Financial Advisor\",\n    \"email\": \"jillj@company.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8112/api/v1/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8112",
+							"path": [
+								"api",
+								"v1",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmployee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jill Jenkins\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8112/api/v1/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8112",
+							"path": [
+								"api",
+								"v1",
+								"employee"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "EmployeeApi",
+			"item": [
+				{
+					"name": "GetAllEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmployeesByNameSearch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge/search/oetta Goldner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge",
+								"search",
+								"oetta Goldner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEmployeeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge/da0a7bd1-0780-4f07-8999-f5395525700a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge",
+								"da0a7bd1-0780-4f07-8999-f5395525700a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "highestSalary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge/highestSalary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge",
+								"highestSalary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "topTenHighestEarningEmployeeNames",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge/topTenHighestEarningEmployeeNames",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge",
+								"topTenHighestEarningEmployeeNames"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jignesh\",\n    \"salary\": 139082,\n    \"age\": 74,\n    \"title\": \"Financial Advisor\",\n    \"email\": \"jillj@company.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmployee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8111/api/v1/employeechallenge/42eeffc2-62d7-4699-b9a5-fbd1440d8296",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8111",
+							"path": [
+								"api",
+								"v1",
+								"employeechallenge",
+								"42eeffc2-62d7-4699-b9a5-fbd1440d8296"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
